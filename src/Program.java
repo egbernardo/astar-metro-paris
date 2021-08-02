@@ -310,13 +310,13 @@ public class Program {
         System.out.println("search.BFS: "+searchBreadth.getPath()+"\n");
 
         System.out.println("****************************** A ******************************");
-//        search.AStar searchAStar = new search.AStar("E6","BLUE", "E13", "RED", subway); // REQUEST
+        search.AStar searchAStar = new search.AStar("E6","BLUE", "E13", "RED", subway); // REQUEST
 //        search.AStar searchAStar = new search.AStar("E1","BLUE", "E6", "BLUE", subway); // LINE BLUE
 //        search.AStar searchAStar = new search.AStar("E11","RED", "E13", "RED", subway);// LINE RED
 //        search.AStar searchAStar = new search.AStar("E12","GREEN", "E14", "GREEN", subway);// LINE GREEN
 //        search.AStar searchAStar = new search.AStar("E10","YELLOW", "E7", "YELLOW", subway);// LINE YELLOW, fail: find a better way
 //
-        AStar searchAStar = new AStar("E1","BLUE", "E14","GREEN", subway);
+//        AStar searchAStar = new AStar("E1","BLUE", "E14","GREEN", subway);
 //        search.AStar searchAStar = new search.AStar("E2","BLUE", "E14","GREEN", subway);
 //        search.AStar searchAStar = new search.AStar("E2","YELLOW", "E14","GREEN", subway);
 

@@ -48,6 +48,7 @@ public class AStar {
 
         this.openedCandidates.add(currentStation); // for first iteration
 
+        this.viewFrontier();
         while (!this.openedCandidates.isEmpty() && !target){
             currentStation = this.openedCandidates.remove(); // first candidate in frontier with smaller time til target
             currentIndex = currentStation.getNum();
@@ -83,15 +84,19 @@ public class AStar {
                 if(!target) {
                     this.expand(candidates); // expand frontier and return list of candidates empty for new iteration
 
-                    // VIEW FRONTIER
-                    for (StationCandidate candidate: this.openedCandidates) {
-                        System.out.println("ITERATION "+this.numIteration+ ": " + candidate); // ----------------------------- ITERATION
-                    }
-                    this.numIteration++;
-                    System.out.println();
                 }
             }
+            this.viewFrontier();
         }
+    }
+
+    private void viewFrontier() {
+        // VIEW FRONTIER
+        for (StationCandidate candidate: this.openedCandidates) {
+            System.out.println("ITERATION "+this.numIteration+ ": " + candidate); // ----------------------------- ITERATION
+        }
+        this.numIteration++;
+        System.out.println();
     }
 
     private boolean generate(StationCandidate currentStation, List<StationCandidate> candidates) {
